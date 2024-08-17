@@ -4,7 +4,7 @@ import { AI } from '@/lib/chat/actions'
 import { auth } from '@/auth'
 import { Session } from '@/lib/types'
 import { getMissingKeys } from '@/app/actions'
-import { Guidesteps } from '@/components/ui/guidesteps'
+import { Navtabs } from '@/components/ui/Navtabs'
 
 export const metadata = {
   title: 'Next.js AI Chatbot'
@@ -18,7 +18,7 @@ export default async function IndexPage() {
   return (
     <AI initialAIState={{ chatId: id, messages: [] }}>
       <div className="grid grid-cols-2 w-screen">
-        <Guidesteps />
+        <Navtabs />
         <Chat id={id} session={session} missingKeys={missingKeys} />
       </div>
     </AI>
