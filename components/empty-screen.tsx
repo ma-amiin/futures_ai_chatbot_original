@@ -7,12 +7,12 @@ import { IconArrowRight } from '@/components/ui/icons'
 export function EmptyScreen() {
   return (
     <div className="mx-auto max-w-2xl px-4">
-      <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
+      <div className="flex flex-col gap-2 rounded-lg border bg-[#313131] p-8">
         <h1 className="text-lg font-semibold">Powering Futures Advisor</h1>
-        <p className="leading-normal text-muted-foreground">
+        <p className="leading-normal text-lg">
           Here to help you make your next step
         </p>
-        <p className="leading-normal text-muted-foreground">More text here</p>
+        <p className="leading-normal text-lg">More text here</p>
       </div>
     </div>
   )

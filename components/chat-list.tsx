@@ -16,7 +16,7 @@ export function ChatList({ messages, session, isShared }: ChatList) {
   }
 
   return (
-    <div className="relative mx-auto max-w-2xl px-4">
+    <div className="relative mx-auto max-w-2xl px-6">
       {!isShared && !session ? (
         <>
           <div className="group relative mb-4 flex items-start md:-ml-12">
@@ -24,7 +24,7 @@ export function ChatList({ messages, session, isShared }: ChatList) {
               <ExclamationTriangleIcon />
             </div>
             <div className="ml-4 flex-1 space-y-2 overflow-hidden px-1">
-              <p className="text-muted-foreground leading-normal">
+              <p className="text-gray-800">
                 Please{' '}
                 <Link href="/login" className="underline">
                   log in
