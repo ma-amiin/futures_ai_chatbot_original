@@ -4,7 +4,7 @@ import { AI } from '@/lib/chat/actions'
 import { auth } from '@/auth'
 import { Session } from '@/lib/types'
 import { getMissingKeys } from '@/app/actions'
-import { Navtabs } from '@/components/ui/Navtabs'
+import  Navtabs  from '@/components/ui/Navtabs'
 
 export const metadata = {
   title: 'Next.js AI Chatbot'

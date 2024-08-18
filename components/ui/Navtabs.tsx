@@ -1,15 +1,28 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import { useState } from 'react'
+import * as React from 'react';
+import { useState } from 'react';
 
-export function Navtabs() {
-  const [activeTab, setActiveTab] = useState('guide1')
+export default function Navtabs() {
+  const [activeTab, setActiveTab] = useState('guide1');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'guide1':
+        return <p>This is the content for Guide 1.</p>;
+      case 'guide2':
+        return <p>This is the content for Guide 2.</p>;
+      case 'guide3':
+        return <p>This is the content for Guide 3.</p>;
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
-      <div className="flex justify-end p-4">
-        <div className="border border-gray-300 rounded-lg w-[775px]">
+      <div className="flex justify-end p-4 h-screen">
+        <div className="border border-gray-300 rounded-lg w-[775px] h-[865px] flex flex-col">
           <div className="flex space-x-4 p-2 justify-end">
             <button
               onClick={() => setActiveTab('guide1')}
@@ -42,8 +55,11 @@ export function Navtabs() {
               Step 3
             </button>
           </div>
+          <div className="my-3 p-4 border border-gray-300 rounded-lg w-[750px] mx-auto grow">
+            {renderContent()}
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }
