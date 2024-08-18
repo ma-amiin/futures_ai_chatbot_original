@@ -10,7 +10,7 @@ export default function Navtabs() {
     return (
       <div
         key={activeTab}
-        className="p-6 bg-white border border-gray-200 rounded-lg shadow-md h-full"
+        className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md h-full"
       >
         {activeTab === 'guide1' && (
           <>
@@ -48,11 +48,15 @@ export default function Navtabs() {
                 starting your own business?
               </li>
             </ul>
-            <h3 className="text-gray-700 animate-fadeInTop">
-              <strong>Action:</strong> Compile all your reflections into a
-              comprehensive list. This will be a foundation for exploring career
-              options that align with your personal profile.
-            </h3>
+            <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
+              <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
+                <h3 className="text-gray-700 animate-fadeInTop">
+                  <strong>Action:</strong> Compile all your reflections into a
+                  comprehensive list. This will be a foundation for exploring
+                  career options that align with your personal profile.
+                </h3>
+              </div>
+            </div>
           </>
         )}
         {activeTab === 'guide2' && (
@@ -91,11 +95,15 @@ export default function Navtabs() {
                 options, and workload management.
               </li>
             </ul>
-            <h3 className="text-gray-700 animate-fadeInTop">
-              <strong>Action:</strong> Use online resources, read job
-              descriptions, and talk to professionals. Gather a comprehensive
-              view to help make an informed decision.
-            </h3>
+            <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
+              <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
+                <h3 className="text-gray-700 animate-fadeInTop">
+                  <strong>Action:</strong> Use online resources, read job
+                  descriptions, and talk to professionals. Gather a
+                  comprehensive view to help make an informed decision.
+                </h3>
+              </div>
+            </div>
           </>
         )}
         {activeTab === 'guide3' && (
@@ -133,12 +141,16 @@ export default function Navtabs() {
                 options based on this new information.
               </li>
             </ul>
-            <h3 className="text-gray-700 animate-fadeInTop">
-              <strong>Action:</strong> Use the advice and feedback you receive
-              to refine your career choices. This will help you make a decision
-              that aligns with both your personal interests and practical
-              considerations.
-            </h3>
+            <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
+              <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
+                <h3 className="text-gray-700 animate-fadeInTop">
+                  <strong>Action:</strong> Use the advice and feedback you
+                  receive to refine your career choices. This will help you make
+                  a decision that aligns with both your personal interests and
+                  practical considerations.
+                </h3>
+              </div>
+            </div>
           </>
         )}
       </div>
@@ -181,7 +193,7 @@ export default function Navtabs() {
               Step 3
             </button>
           </div>
-          <div className="mb-3 outline-none rounded-lg w-[750px] mx-auto grow">
+          <div className="mb-3 outline-none rounded-lg w-[750px] mx-auto grow relative">
             {renderContent()}
           </div>
         </div>
