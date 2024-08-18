@@ -57,28 +57,36 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
     useScrollAnchor()
 
   return (
-    <div
-      className="w-full m-8 mr-8 rounded-md group border-2 overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
-      ref={scrollRef}
-    >
-      <div
-        className={cn('pb-[200px] pt-4 md:pt-10', className)}
-        ref={messagesRef}
-      >
-        {messages.length ? (
-          <ChatList messages={messages} isShared={false} session={session} />
-        ) : (
-          <EmptyScreen />
-        )}
-        <div className="w-full h-px" ref={visibilityRef} />
+    <>
+      <div className="m-4 w-[775px] h-[865px] rounded-lg border-2 border-gray-300 flex flex-col">
+        <div
+          className="grow m-4 rounded-lg group border-2 border-gray-300 overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
+          ref={scrollRef}
+        >
+          <div
+            className={cn('pb-[200px] pt-4 md:pt-10', className)}
+            ref={messagesRef}
+          >
+            {messages.length ? (
+              <ChatList
+                messages={messages}
+                isShared={false}
+                session={session}
+              />
+            ) : (
+              <EmptyScreen />
+            )}
+            <div className="w-full h-px" ref={visibilityRef} />
+          </div>
+          <ChatPanel
+            id={id}
+            input={input}
+            setInput={setInput}
+            isAtBottom={isAtBottom}
+            scrollToBottom={scrollToBottom}
+          />
+        </div>
       </div>
-      <ChatPanel
-        id={id}
-        input={input}
-        setInput={setInput}
-        isAtBottom={isAtBottom}
-        scrollToBottom={scrollToBottom}
-      />
-    </div>
+    </>
   )
 }
