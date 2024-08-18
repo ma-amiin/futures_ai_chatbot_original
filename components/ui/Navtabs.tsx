@@ -10,7 +10,7 @@ export default function Navtabs() {
     return (
       <div
         key={activeTab}
-        className="relative p-6 bg-white border border-gray-200 rounded-lg shadow-md h-full"
+        className="relative p-6 bg-[#d8d4cc]  rounded-lg shadow-md h-full"
       >
         {activeTab === 'guide1' && (
           <>
