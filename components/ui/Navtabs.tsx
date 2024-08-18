@@ -148,7 +148,7 @@ export default function Navtabs() {
   return (
     <>
       <div className="flex justify-end p-4 h-screen">
-        <div className="bg-[#313131] outline-none rounded-lg w-[775px] h-[865px] flex flex-col">
+        <div className="bg-[#313131] outline-none rounded-lg w-[775px] h-[830px] flex flex-col">
           <div className="flex space-x-2 p-4 pb-0 justify-end">
             <button
               onClick={() => setActiveTab('guide1')}
