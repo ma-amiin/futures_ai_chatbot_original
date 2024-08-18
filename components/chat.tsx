@@ -60,7 +60,7 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
     <>
       <div className="bg-[#313131] m-4 w-[775px] h-[865px] rounded-lg outline-none flex flex-col">
         <div
-          className="bg-white grow m-4 rounded-lg group outline-none overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
+          className="bg-white grow m-3 rounded-lg group outline-none overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
           ref={scrollRef}
         >
           <div
