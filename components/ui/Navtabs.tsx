@@ -164,7 +164,7 @@ export default function Navtabs() {
           <div className="flex space-x-2 p-4 pb-0 justify-end">
             <button
               onClick={() => setActiveTab('guide1')}
-              className={`p-2 px-4 rounded ${
+              className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide1'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
@@ -174,7 +174,7 @@ export default function Navtabs() {
             </button>
             <button
               onClick={() => setActiveTab('guide2')}
-              className={`p-2 px-4 rounded ${
+              className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide2'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
@@ -184,7 +184,7 @@ export default function Navtabs() {
             </button>
             <button
               onClick={() => setActiveTab('guide3')}
-              className={`p-2 px-4 rounded ${
+              className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide3'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
