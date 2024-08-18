@@ -58,9 +58,9 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
 
   return (
     <>
-      <div className="bg-[#313131] m-4 w-[775px] h-[865px] rounded-lg border-2 border-gray-300 flex flex-col">
+      <div className="bg-[#313131] m-4 w-[775px] h-[865px] rounded-lg outline-none flex flex-col">
         <div
-          className="bg-white grow m-4 rounded-lg group border-2 border-gray-300 overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
+          className="bg-white grow m-4 rounded-lg group outline-none overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
           ref={scrollRef}
         >
           <div

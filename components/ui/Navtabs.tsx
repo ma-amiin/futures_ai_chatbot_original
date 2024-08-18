@@ -22,11 +22,11 @@ export default function Navtabs() {
   return (
     <>
       <div className="flex justify-end p-4 h-screen ">
-        <div className="bg-[#313131] border-2 border-gray-300 rounded-lg w-[775px] h-[865px] flex flex-col">
-          <div className="flex space-x-4 p-2 justify-end">
+        <div className="bg-[#313131] outline-none rounded-lg w-[775px] h-[865px] flex flex-col">
+          <div className="flex space-x-2 p-4 pb-0 justify-end">
             <button
               onClick={() => setActiveTab('guide1')}
-              className={`pb-2 px-4 rounded  ${
+              className={`p-2 px-4 rounded  ${
                 activeTab === 'guide1'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
@@ -36,7 +36,7 @@ export default function Navtabs() {
             </button>
             <button
               onClick={() => setActiveTab('guide2')}
-              className={`pb-2 px-4 rounded ${
+              className={`p-2 px-4 rounded ${
                 activeTab === 'guide2'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
@@ -46,7 +46,7 @@ export default function Navtabs() {
             </button>
             <button
               onClick={() => setActiveTab('guide3')}
-              className={`pb-2 px-4 rounded ${
+              className={`p-2 px-4 rounded ${
                 activeTab === 'guide3'
                   ? 'bg-blue text-white'
                   : 'text-gray-500 hover:bg-gray-200'
@@ -55,7 +55,7 @@ export default function Navtabs() {
               Step 3
             </button>
           </div>
-          <div className="bg-white my-3 p-4 border-2 border-gray-300 rounded-lg w-[750px] mx-auto grow">
+          <div className="bg-white my-3 p-4 outline-none rounded-lg w-[750px] mx-auto grow">
             {renderContent()}
           </div>
         </div>
