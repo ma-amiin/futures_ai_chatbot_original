@@ -17,7 +17,7 @@ export default async function IndexPage() {
 
   return (
     <AI initialAIState={{ chatId: id, messages: [] }}>
-      <div className="grid grid-cols-2 w-screen">
+      <div className="bg-[#001219] grid grid-cols-2 w-screen">
         <Navtabs />
         <Chat id={id} session={session} missingKeys={missingKeys} />
       </div>
