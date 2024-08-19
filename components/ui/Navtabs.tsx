@@ -2,6 +2,11 @@
 
 import * as React from 'react'
 import { useState } from 'react'
+import Image from 'next/image'
+
+import nextStep1 from "public/next-step-1.svg"
+import nextStep2 from "public/next-step-2.svg"
+import nextStep3 from "public/next-step-3.svg"
 
 export default function Navtabs() {
   const [activeTab, setActiveTab] = useState('guide1')
@@ -10,18 +15,18 @@ export default function Navtabs() {
     return (
       <div
         key={activeTab}
-        className="relative p-6 bg-[#d8d4cc]  rounded-lg shadow-md h-full"
+        className="relative p-6 bg-[#d8d4cc] rounded-lg shadow-md h-full"
       >
         {activeTab === 'guide1' && (
           <>
-            <h1 className="text-2xl font-bold mb-4 text-gray-800 animate-fadeInTop">
+            <h1 className="text-[2rem] font-bold mb-4 text-gray-800 animate-fadeInTop">
               Step 1: Self-Assessment
             </h1>
-            <h2 className="mb-4 text-gray-700 animate-fadeInTop">
+            <h2 className="mb-4 text-gray-800 animate-fadeInTop">
               <strong>Purpose:</strong> Discover what you love, what you’re good
               at, and what’s important to you.
             </h2>
-            <ul className="list-disc list-inside pl-6 text-gray-600 mb-4">
+            <ul className="list-disc list-inside pl-6 text-gray-800 mb-4">
               <li className="animate-fadeInTop">
                 Find What Excites You: What subjects or activities make you feel
                 energized and interested? Write down your favorite activities
@@ -48,9 +53,12 @@ export default function Navtabs() {
                 starting your own business?
               </li>
             </ul>
+            <div className='flex justify-center self-center animate-fadeInTop'>
+            <Image src={nextStep1} alt={'Discover Yourself'} width={275} height={275} />
+            </div>
             <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
               <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
-                <h3 className="text-gray-700 animate-fadeInTop">
+                <h3 className="text-gray-800 animate-fadeInTop">
                   <strong>Action:</strong> Compile all your reflections into a
                   comprehensive list. This will be a foundation for exploring
                   career options that align with your personal profile.
@@ -61,7 +69,7 @@ export default function Navtabs() {
         )}
         {activeTab === 'guide2' && (
           <>
-            <h1 className="text-2xl font-bold mb-4 text-gray-800 animate-fadeInTop">
+            <h1 className="text-[2rem] font-bold mb-4 text-gray-800 animate-fadeInTop">
               Step 2: Research and Exploration
             </h1>
             <h2 className="mb-4 text-gray-700 animate-fadeInTop">
@@ -95,6 +103,9 @@ export default function Navtabs() {
                 options, and workload management.
               </li>
             </ul>
+            <div className='flex justify-center self-center animate-fadeInTop'>
+            <Image src={nextStep2} alt={'Career Options'} width={225} height={225} />
+            </div>
             <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
               <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
                 <h3 className="text-gray-700 animate-fadeInTop">
@@ -108,13 +119,13 @@ export default function Navtabs() {
         )}
         {activeTab === 'guide3' && (
           <>
-            <h1 className="text-2xl font-bold mb-4 text-gray-800 animate-fadeInTop">
+            <h1 className="text-[2rem] font-bold mb-4 text-gray-800 animate-fadeInTop">
               Step 3: Consult and Refine
             </h1>
-            <h2 className="mb-4 text-gray-700 animate-fadeInTop">
+            <h2 className="mb-4 text-gray-800 animate-fadeInTop">
               <strong>Purpose:</strong> Seek advice and narrow down options.
             </h2>
-            <ul className="list-disc list-inside pl-6 text-gray-600 mb-4">
+            <ul className="list-disc list-inside pl-6 text-gray-800 mb-4">
               <li className="animate-fadeInTop">
                 Review Your Options: Evaluate which careers align best with your
                 interests, strengths, and values. Reflect on why these options
@@ -141,9 +152,12 @@ export default function Navtabs() {
                 options based on this new information.
               </li>
             </ul>
+            <div className='flex justify-center self-center animate-fadeInTop'>
+            <Image src={nextStep3} alt={'Seek Advice'} width={220} height={220} />
+            </div>
             <div className="absolute bottom-0 left-0 w-full p-4 animate-fadeInTop">
               <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg w-full animate-fadeInTop">
-                <h3 className="text-gray-700 animate-fadeInTop">
+                <h3 className="text-gray-800 animate-fadeInTop">
                   <strong>Action:</strong> Use the advice and feedback you
                   receive to refine your career choices. This will help you make
                   a decision that aligns with both your personal interests and
@@ -160,14 +174,14 @@ export default function Navtabs() {
   return (
     <>
       <div className="flex justify-end p-4 h-screen">
-        <div className="bg-[#313131] outline-none rounded-lg w-[775px] h-[830px] flex flex-col">
-          <div className="flex space-x-2 p-4 pb-0 justify-end">
+        <div className="bg-[#313131] outline-none rounded-lg w-[48.44rem] h-[51.88rem] flex flex-col">
+          <div className="flex space-x-1 p-5 pb-0 justify-end">
             <button
               onClick={() => setActiveTab('guide1')}
               className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide1'
                   ? 'bg-blue text-white'
-                  : 'text-gray-500 hover:bg-gray-200'
+                  : 'text-gray-500 hover:bg-[#d8d4cc]'
               }`}
             >
               Step 1
@@ -177,7 +191,7 @@ export default function Navtabs() {
               className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide2'
                   ? 'bg-blue text-white'
-                  : 'text-gray-500 hover:bg-gray-200'
+                  : 'text-gray-500 hover:bg-[#d8d4cc]'
               }`}
             >
               Step 2
@@ -187,13 +201,13 @@ export default function Navtabs() {
               className={`p-2 px-8 h-16 rounded ${
                 activeTab === 'guide3'
                   ? 'bg-blue text-white'
-                  : 'text-gray-500 hover:bg-gray-200'
+                  : 'text-gray-500 hover:bg-[#d8d4cc]'
               }`}
             >
               Step 3
             </button>
           </div>
-          <div className="mb-3 outline-none rounded-lg w-[750px] mx-auto grow relative">
+          <div className="mb-3 outline-none rounded-lg w-[45.94rem] mx-auto grow relative">
             {renderContent()}
           </div>
         </div>
