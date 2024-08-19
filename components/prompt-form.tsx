@@ -67,14 +67,14 @@ export function PromptForm({
       }}
     >
       <div
-        className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-[#313131]  px-8 sm:rounded-md sm:border sm:px-12"
+        className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-[#313131]  px-8 sm:rounded-md sm:px-12"
       >
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-[14px] size-8 rounded-full bg-background p-0 sm:left-4"
+              className="absolute left-0 top-[14px] size-8 rounded-full bg-[#d8d4cc] sm:left-4"
               onClick={() => {
                 router.push('/new')
               }}
